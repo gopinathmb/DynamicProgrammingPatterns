@@ -13,7 +13,7 @@ public class ZeroOneKnapsackBU {
       return 0;
     }
 
-    if (wt[n - 1] < W) {
+    if (wt[n - 1] <= W) {
       return Math.max(val[n - 1] + knapsack(wt, val, W - wt[n - 1], n - 1),
           knapsack(wt, val, W, n - 1));
     } else {

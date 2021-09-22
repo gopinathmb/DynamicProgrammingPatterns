@@ -10,13 +10,13 @@ import org.junit.Test;
 /**
  * @author gopinath_mb
  */
-public class ZeroOneKnapsackBUTest {
+public class ZeroOneKnapsackBUWithMemoizationTest {
 
-  ZeroOneKnapsackBU knapsack;
+  ZeroOneKnapsackBUWithMemoization knapsack;
 
   @Before
   public void initialize() {
-    knapsack = new ZeroOneKnapsackBU();
+    knapsack = new ZeroOneKnapsackBUWithMemoization();
   }
 
   @Test
