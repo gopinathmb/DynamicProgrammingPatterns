@@ -8,38 +8,42 @@ import com.gopi.dp.util.DPUtil;
 /**
  * @author gopinath_mb
  */
-public class ZeroOneKnapsackBUWithMemoization {
+public class ZeroOneKnapsackTopDown {
 
   public int knapsack(int wt[], int val[], int W, int n) {
 
-    int t[][] = new int[n + 1][W + 1];// so that we can store value n and W in
-                                      // matrice and matrice start from zero
+    int t[][] = new int[n + 1][W + 1];
+    // just replace n with i and W with j. Just refer BottomUp and deduct
+    // TopDown.
     initialization(W, n, t);
 
-    int profit = knapsackWithMemoization(wt, val, W, n, t);
+    for(int i = 1; i <= n; i++) {
+      for(int j = 1; j <= W; j++) {
 
+        if (wt[i - 1] <= j) {
+          t[i][j] = Math.max(val[i - 1] + t[i - 1][j - wt[i - 1]], t[i - 1][j]);
+        } else {
+          t[i][j] = t[i - 1][j];
+        }
+      }
+    }
     DPUtil.printMatrix(t);
-    return profit;
+    return t[n][W];
 
   }
 
   /**
-   * Fill base condition condition and initialize rest with -1 to indicate that
-   * it is not yet solved.
-   * 
    * @param W
    * @param n
    * @param t
    */
   private void initialization(int W, int n, int[][] t) {
-    for(int i = 0; i < n + 1; i++) {
-      for(int j = 0; j < W + 1; j++) {
-        if (i == 0 || j == 0) {
-          t[i][j] = 0;
-        } else {
-          t[i][j] = -1;
-        }
-      }
+    for(int i = 0; i <= n; i++) {
+      t[i][0] = 0;
+    }
+
+    for(int j = 0; j <= W; j++) {
+      t[0][j] = 0;
     }
   }
 
