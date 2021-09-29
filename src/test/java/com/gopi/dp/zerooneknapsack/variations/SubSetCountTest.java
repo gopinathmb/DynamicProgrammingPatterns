@@ -42,5 +42,11 @@ public class SubSetCountTest {
     int[] values = { 1, 1, 1, 1 };
     assertEquals(6, SubSetCount.subsetCount(values, 2));
   }
+  
+  @Test
+  public void testSubSetSumCount6() {
+    int[] values = { 2,2,3 };
+    assertEquals(2, SubSetCount.subsetCount(values, 2));
+  }
 
 }
