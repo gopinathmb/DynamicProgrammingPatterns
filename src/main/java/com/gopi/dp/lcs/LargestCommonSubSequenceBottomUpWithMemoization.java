@@ -12,6 +12,11 @@ public class LargestCommonSubSequenceBottomUpWithMemoization {
     int m = (x == null ? 0 : x.length());
     int n = (y == null ? 0 : y.length());
     int dp[][] = new int[m + 1][n + 1];
+    for(int i = 0; i <= m; i++) {
+      for(int j = 0; j <= n; j++) {
+        dp[i][j] = -1;
+      }
+    }
     return lcsInternal(x, y, m, n, dp);
 
   }
@@ -24,6 +29,7 @@ public class LargestCommonSubSequenceBottomUpWithMemoization {
    * @return
    */
   private static int lcsInternal(String x, String y, int m, int n, int dp[][]) {
+
     if (m == 0 || n == 0) {
       return 0;
     }
