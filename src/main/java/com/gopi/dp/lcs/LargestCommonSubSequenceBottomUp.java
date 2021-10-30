@@ -22,6 +22,7 @@ public class LargestCommonSubSequenceBottomUp {
    * @param n
    * @return
    */
+  //This is basic pattern so know more about it
   private static int lcsInternal(String x, String y, int m, int n) {
     if (m == 0 || n == 0) {
       return 0;
