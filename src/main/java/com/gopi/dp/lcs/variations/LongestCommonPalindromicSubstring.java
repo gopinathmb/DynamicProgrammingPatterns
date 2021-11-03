@@ -25,12 +25,13 @@ public class LongestCommonPalindromicSubstring {
     }
     
     int i=resLoc[0];
-    while(i!=0)
+    
+    while(lcs!=0)
     {
       sb.append(x.charAt(i-1));
       i--;
+      lcs--;
     }
-    System.out.println(sb.toString());
     return sb.toString();
     
   }
@@ -51,8 +52,6 @@ public class LongestCommonPalindromicSubstring {
       dp[0][i] = 0;
     }
 
-     // babad
-     //dabab
     int res = 0;
     for(int i = 1; i <= m; i++) {
       for(int j = 1; j <= n; j++) {
