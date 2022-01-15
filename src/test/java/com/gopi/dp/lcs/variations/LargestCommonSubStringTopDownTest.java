@@ -26,8 +26,7 @@ public class LargestCommonSubStringTopDownTest {
   @Test
   public void testLargestCommonSubSubstringTopDown3() {
 
-//    Assert.assertEquals(3, LargestCommonSubSubstringTopDown.lcs("abcdef", "mabcfe"));
-    LongestCommonPalindromicSubstring.printLPS("babad");
+    Assert.assertEquals(3, LargestCommonSubSubstringTopDown.lcs("abcdef", "mabcfe"));
     
    
   }
