@@ -7,7 +7,7 @@ package com.gopi.dp.util;
  * @author gopinath_mb
  */
 public class DPUtil {
-
+// This will print matrix.
   public static void printMatrix(int[][] t) {
     System.err.println("---------------START----------------------");
     for(int i = 0; i < t.length; i++) {
