@@ -6,9 +6,11 @@ package com.gopi.dp.util;
 /**
  * @author gopinath_mb
  */
-public class DPUtil {
-// This will print matrix and will be used in all classes 
-  public static void printMatrix(int[][] t) {
+public class DPUtil 
+{
+  // This will print matrix and will be used in all classes 
+  public static void printMatrix(int[][] t) 
+  {
     System.err.println("---------------START----------------------");
     for(int i = 0; i < t.length; i++) {
       for(int j = 0; j < t[i].length; j++) {
@@ -21,7 +23,8 @@ public class DPUtil {
 
   }
 
-  public static void printMatrix(boolean[][] t) {
+  public static void printMatrix(boolean[][] t) 
+  {
     System.err.println("---------------START----------------------");
     for(int i = 0; i < t.length; i++) {
       for(int j = 0; j < t[i].length; j++) {
