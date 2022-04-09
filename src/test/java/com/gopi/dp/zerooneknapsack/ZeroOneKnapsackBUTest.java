@@ -17,6 +17,7 @@ public class ZeroOneKnapsackBUTest {
   @Before
   public void initialize() {
     knapsack = new ZeroOneKnapsackBU();
+    
   }
 
   @Test
